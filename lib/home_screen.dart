@@ -31,6 +31,26 @@ class _BmiState extends State<Bmi> {
                     Expanded(
                       child: GestureDetector(
                         onTap: (){
+                          male=false;
+                          setState(() {});
+                        },
+                        child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border:Border.all(color:
+                                male==false ?Colors.red:Colors.black,
+                                    width: 8),
+                                borderRadius: BorderRadius.circular(20)
+                            ),
+                            height: 100,
+                            child: Image.asset("asset/images/female.png",height: 80,width: 80,)
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10,),
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: (){
                           male=true;
                           setState(() {});
                         },
@@ -49,26 +69,7 @@ class _BmiState extends State<Bmi> {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 10,),
-                    Expanded(
-                      child: GestureDetector(
-                        onTap: (){
-                          male=false;
-                          setState(() {});
-                        },
-                        child: Container(
-                            decoration: BoxDecoration(
-                            color: Colors.white,
-                            border:Border.all(color:
-                            male==false ?Colors.red:Colors.black,
-                                width: 8),
-                            borderRadius: BorderRadius.circular(20)
-                        ),
-                            height: 100,
-                            child: Image.asset("asset/images/female.png",height: 80,width: 80,)
-                        ),
-                      ),
-                    ),
+
 
                   ],
                 ),
